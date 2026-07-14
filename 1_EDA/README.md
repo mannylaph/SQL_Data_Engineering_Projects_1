@@ -1,6 +1,6 @@
 # Exploratory Data Analysis with SQL: Job Market Analysis
 
-![Project 1 Overview](../images\1_1_Project1_EDA.png)
+![Project 1 Overview](../images/1_1_Project1_EDA.png)
 
 ## 🧾 Executive Summary (For Hiring Managers)
 
