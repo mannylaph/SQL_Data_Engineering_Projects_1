@@ -5,7 +5,7 @@ drop table if exists company_dim;
 drop table if exists skills_dim;
 
 
-
+select '=== Loading company_dim Table ===' as info;
 
 CREATE TABLE company_dim(
     company_id      integer    primary key,
@@ -17,10 +17,11 @@ CREATE TABLE company_dim(
 
 CREATE TABLE skills_dim(
     skill_id        integer    primary key,
-    skill           varchar,
+    skills           varchar,
     type            varchar
 
 );
+
 
 
 CREATE TABLE job_postings_fact(
@@ -30,10 +31,9 @@ CREATE TABLE job_postings_fact(
     job_title               varchar,
     job_location            varchar,
     job_via                 varchar,
-    job_schedule            varchar,
     job_work_from_home      varchar,
     search_location         varchar,
-    job_poste_date          varchar,
+    job_posted_date          varchar,
     job_no_degree_mention   varchar,
     job_health_insurance    varchar,
     job_country             varchar,
@@ -42,6 +42,9 @@ CREATE TABLE job_postings_fact(
     salary_hour_avg         double,
     FOREIGN KEY(company_id) REFERENCES company_dim(company_id)
 );
+
+
+
 
 
 
