@@ -33,7 +33,7 @@ CREATE TABLE job_postings_fact(
     job_via                 varchar,
     job_work_from_home      varchar,
     search_location         varchar,
-    job_posted_date          varchar,
+    job_posted_date         timestamp,
     job_no_degree_mention   varchar,
     job_health_insurance    varchar,
     job_country             varchar,
