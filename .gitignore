@@ -9,6 +9,7 @@
 /data/tmp/
 /data/intermediate/
 /exports/
+/dw_mart
 
 # 🔐 Secrets
 .env
