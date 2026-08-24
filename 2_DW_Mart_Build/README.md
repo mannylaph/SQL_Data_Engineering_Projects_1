@@ -28,14 +28,14 @@ An end-to-end data engineering pipleline that transforms raw CSV files stored in
 
 ## 🏗️ Pipeline Architecture
 
-![Data Warehouse](../images/dw_diagram.jpg)
+![Data Warehouse](../images/1_2_Project2_Data_Pipeline.png)
 
 The pipeline transforms job postings CSV from Google Cloud storage into a normalized star schema data warehouse, then builds analytical data marts. BI tools like Excel, Power BI, Tableau, Python consume from both marts and warehouse.
 
 ## Data Warehouse
 The data wareouse implements a star schema using `company_dim`, `skills_dim`,`job_postings_fact` and `skills_job_dim` tables.
 
-![Data Warehouse Schema](../images/data_warehouse.jpg)
+![Data Warehouse Schema](../images/1_2_Data_Warehouse.png)
 
 - **SQL Files:**  
     -[`01_create_tables_dw.sql`](../2_DW_Mart_Build/01_create_tables_dw.sql) Defines star schema with 4 core tables
@@ -45,7 +45,7 @@ The data wareouse implements a star schema using `company_dim`, `skills_dim`,`jo
 
 ## Flat Mart
 A Denormalized table with all dimensions for adhoc queries
-![Flat Mart Schema](../images/flat_mart.jpg)
+![Flat Mart Schema](../images/1_2_Flat_Mart.png)
 
 - **SQL Files:**  
     -[`3_create_flat_mart.sql`](../2_DW_Mart_Build/3_create_flat_mart.sql) - Builds denormalized table with all dimension tables merged.
@@ -57,7 +57,7 @@ A Denormalized table with all dimensions for adhoc queries
 ## Skills Mart
 Time-series skill demand analysis with additive measures.
 
-![Skill Mart Schema](../images/skill_mart.jpg)
+![Skill Mart Schema](../images/1_2_Skills_Mart.png)
 
 - **SQL Files:**  
     -[`04_create_skills_mart.sql`](../2_DW_Mart_Build/04_create_skills_mart.sql) - Builds time-series skill demand mart.
@@ -67,21 +67,13 @@ Time-series skill demand analysis with additive measures.
 **Key Features:** All measures are additive (counts/sums) for safe re-aggregation.
 
 
-## Flat Mart
-A Denormalized table with all dimensions for adhoc queries
-![Flat Mart Schema](../images/flat_mart.jpg)
 
-- **SQL Files:**  
-    -[`3_create_flat_mart.sql`](../2_DW_Mart_Build/3_create_flat_mart.sql) - Builds denormalized table with all dimension tables merged.
-
-- **Purpose:** Denormalized table used for quick adhoc queries
-- **Grain:** one row per job posting with all dimensions merged.
 
 
 ## Priority Mart
 Priority role tracking with incremental pdates using MERGE operations.
 
-![Priority Mart Schema](../images/priority_mart.jpg)
+![Priority Mart Schema](../images/1_2_Priority_Mart.png)
 
 - **SQL Files:**  
     -[`05_create_priority_mart.sql`](../2_DW_Mart_Build/05_create_priority_mart.sql) - Initial build of priority roles and jobs snapshot
