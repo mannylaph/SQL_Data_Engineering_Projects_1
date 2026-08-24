@@ -11,3 +11,12 @@ A collection of SQL projects built to demonstrate real-world data engineering sk
 ![Project 1 Overview](/images/1_1_Project1_EDA.png)
 
 SQL-driven analysis of the data engineer job market — using multi-table joins, aggregations, and custom scoring to surface which skills are actually worth learning.
+
+### [2. Data Pipeline - Data Warehouse & Mart](/2_DW_Mart_Build/README.md)
+
+
+![Data Warehouse](../SQL_Data_Engineering_Projects/images/dw_diagram.jpg)
+
+An end-to-end data engineering pipleline that transforms raw CSV files stored in Google cloud storage into a normalized star schema data warehouse, then build data marts for analytics.
+
+**Skills Demonstrated**   - Dimensional modeling, ETL pipeline development,data mart architecture, production practices
